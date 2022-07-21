@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_baseline_touch_app_24"
+        android:title="Dados" />
+    <item
+        android:icon="@drawable/ic_baseline_calculate_24"
+        android:title="Calculadora" />
+    <item
+        android:icon="@drawable/ic_balanza"
+        android:title="IMC" />
+</menu>
