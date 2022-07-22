@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProject/DeslizApp/app/src/main/res/drawable/text_circle.xml" value="0.14" />
         <entry key="..\:/AndroidStudioProject/DeslizApp/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/AndroidStudioProject/DeslizApp/app/src/main/res/layout/fragment_calculadora.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProject/DeslizApp/app/src/main/res/layout/fragment_dado.xml" value="0.358695652173913" />
         <entry key="..\:/AndroidStudioProject/DeslizApp/app/src/main/res/layout/fragment_i_m_c.xml" value="0.358695652173913" />
+        <entry key="..\:/AndroidStudioProject/DeslizApp/app/src/main/res/layout/fragment_table.xml" value="0.14722222222222223" />
+        <entry key="..\:/AndroidStudioProject/DeslizApp/app/src/main/res/layout/tabla_imc.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProject/DeslizApp/app/src/main/res/menu/botones.xml" value="0.25" />
       </map>
     </option>

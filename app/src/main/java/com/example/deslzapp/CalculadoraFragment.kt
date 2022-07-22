@@ -22,48 +22,52 @@ class CalculadoraFragment : Fragment() {
     ): View? {
         _b= FragmentCalculadoraBinding.inflate(inflater,container,false)
         return b.root
+    }
 
-        b.textView4.text = "0"
-        b.button16.setOnClickListener { pressNum("0") }
-        b.button12.setOnClickListener { pressNum("1") }
-        b.button13.setOnClickListener { pressNum("2") }
-        b.button14.setOnClickListener { pressNum("3") }
-        b.button8.setOnClickListener { pressNum("4") }
-        b.button9.setOnClickListener { pressNum("5") }
-        b.button10.setOnClickListener { pressNum("6") }
-        b.button5.setOnClickListener { pressNum("7") }
-        b.button4.setOnClickListener { pressNum("8") }
-        b.button6.setOnClickListener { pressNum("9") }
-        b.button17.setOnClickListener { }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        b.button2.setOnClickListener {
-            n1 = b.textView4.text.toString().toInt()
+        b.tvPantalla.text = "0"
+        b.btn0.setOnClickListener { pressNum("0") }
+        b.btn1.setOnClickListener { pressNum("1") }
+        b.btn2.setOnClickListener { pressNum("2") }
+        b.btn3.setOnClickListener { pressNum("3") }
+        b.btn4.setOnClickListener { pressNum("4") }
+        b.btn5.setOnClickListener { pressNum("5") }
+        b.btn6.setOnClickListener { pressNum("6") }
+        b.btn7.setOnClickListener { pressNum("7") }
+        b.btn8.setOnClickListener { pressNum("8") }
+        b.btn9.setOnClickListener { pressNum("9") }
+        b.btnPunto.setOnClickListener {"."}
+
+        b.btnDiv.setOnClickListener {
+            n1 = b.tvPantalla.text.toString().toInt()
             op = 4
-            b.textView4.text = "0"
+            b.tvPantalla.text = "0"
         }
-        b.button7.setOnClickListener {
-            n1 = b.textView4.text.toString().toInt()
+        b.btnMulti.setOnClickListener {
+            n1 = b.tvPantalla.text.toString().toInt()
             op = 3
-            b.textView4.text = "0"
+            b.tvPantalla.text = "0"
 
         }
-        b.button11.setOnClickListener {
-            n1 = b.textView4.text.toString().toInt()
+        b.btnMenos.setOnClickListener {
+            n1 = b.tvPantalla.text.toString().toInt()
             op = 2
-            b.textView4.text = "0"
+            b.tvPantalla.text = "0"
 
         }
-        b.button15.setOnClickListener {
-            n1 = b.textView4.text.toString().toInt()
+        b.btnMas.setOnClickListener {
+            n1 = b.tvPantalla.text.toString().toInt()
             op = 1
-            b.textView4.text = "0"
+            b.tvPantalla.text = "0"
 
         }
 
 
 
-        b.button18.setOnClickListener {
-            n2 = b.textView4.text.toString().toInt()
+        b.btnIgual.setOnClickListener {
+            n2 = b.tvPantalla.text.toString().toInt()
             var result = when (op) {
                 1 -> n1 + n2
                 2 -> n1 - n2
@@ -71,9 +75,9 @@ class CalculadoraFragment : Fragment() {
                 4 -> n1 / n2
                 else -> 0
             }
-            b.textView4.text = result.toString()
+            b.tvPantalla.text = result.toString()
         }
-        b.button.setOnClickListener { b.textView4.text ="0".toInt().toString() }
+        b.btnClear.setOnClickListener { b.tvPantalla.text ="0".toInt().toString() }
 
 
 
@@ -87,8 +91,8 @@ class CalculadoraFragment : Fragment() {
 
     }
     fun pressNum(n:String) {
-        if (b.textView4.text.length < 9)
-            b.textView4.text = b.textView4.text.toString().plus(n).toInt().toString()
+        if (b.tvPantalla.text.length < 9)
+            b.tvPantalla.text = b.tvPantalla.text.toString().plus(n).toInt().toString()
     }
 
 }

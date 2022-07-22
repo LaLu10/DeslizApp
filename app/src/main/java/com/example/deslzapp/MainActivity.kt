@@ -13,27 +13,25 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-    }}
+        binding.BottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.opdados -> {
+                    Navigation.findNavController(binding.fragmentContainerView)
+                        .navigate(R.id.dadoFragment)
+                    true
+                }
+                R.id.opcalcladora -> {
+                    findNavController(R.id.fragmentContainerView)
+                        .navigate(R.id.calculadoraFragment)
+                    true
+                }
+                R.id.opimc -> {
+                    binding.fragmentContainerView.findNavController()
+                        .navigate(R.id.IMCFragment)
+                    true
+                }
+                else -> false
+            }
 
-//        binding.BottomNavigationView.setOnItemSelectedListener{ item ->
-//        when (item.itemId){
-//            R.id.opBotones -> {
-//                Navigation.findNavController(binding.fragmentContainerView)
-//                    .navigate(R.id.firstFragment)
-//                true
-//            }
-//            R.id.opSelectorBar -> {
-//                findNavController(R.id.fragmentContainerView)
-//                    .navigate(R.id.secondFragment)
-//                true
-//            }
-//            R.id.opSeekBar -> {
-//                binding.fragmentContainerView.findNavController()
-//                    .navigate(R.id.thirdFragment)
-//                true
-//            }
-//            else -> false
-//        }
-//
-//    }
+        }}}
 
